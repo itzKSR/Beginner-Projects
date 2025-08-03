@@ -4,7 +4,7 @@
     padding: 0;
     margin: 0;
     font-family: "Poppins", sans-serif;
-    font-weight: 600;
+    /* font-weight: 600; */
     font-style: normal;
 }
 
@@ -189,17 +189,23 @@ section.third video{
     padding: 38px;
 }
 
+.faqbox svg{
+    filter: invert(1);
+}
+
 .faqbox{
     display: flex;
-    background-color: #393737;
+    background-color: #2d2d2d;
     padding: 24px; 
     max-width: 55vw;
     margin: 34px auto;
     justify-content: space-between;
     cursor: pointer;
     transition: all 0.5s ease-out;
+    font-size: 1.5rem;
+    font-weight: 400;
 }
 
 .faqbox:hover{
-    background-color: #5e5d5d;
+    background-color: #414141;
 }
