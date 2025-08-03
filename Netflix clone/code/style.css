@@ -35,6 +35,7 @@ nav {
     display: flex;
     align-items: center;
     height: 100px;
+    padding: 16px 0px 0px 0px;
 }
 
 nav img {
@@ -85,6 +86,8 @@ nav button {
 .separation {
     height: 11px;
     background-color: rgba(24, 24, 24, 1);
+    position: relative;
+    z-index: 20;
 }
 
 .btn {
@@ -139,6 +142,7 @@ nav button {
     align-items: center;
 }
 
+
 .secImg {
     position: relative;
 }
@@ -147,7 +151,7 @@ nav button {
     position: absolute;
     top: 51px;
     right: 0;
-    width: 23.5vw;
+    width: 555px;
 }
 
 .secImg img {
@@ -156,10 +160,11 @@ nav button {
     z-index: 10;
 }
 
-section.first > div{
+section.first>div {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding: 34px 0px;
 }
 
 section.first>div :first-child {
@@ -172,31 +177,26 @@ section.first>div :nth-child(2) {
     font-weight: 400;
 }
 
-
-section.third video{
-    width:24vw;
-}
-
-.faq h2{
+.faq h2 {
     text-align: center;
     font-size: 48px;
     font-weight: 900;
 }
 
-.faq{
+.faq {
     background-color: black;
     color: white;
     padding: 38px;
 }
 
-.faqbox svg{
+.faqbox svg {
     filter: invert(1);
 }
 
-.faqbox{
+.faqbox {
     display: flex;
     background-color: #2d2d2d;
-    padding: 24px; 
+    padding: 24px;
     max-width: 55vw;
     margin: 34px auto;
     justify-content: space-between;
@@ -206,7 +206,116 @@ section.third video{
     font-weight: 400;
 }
 
-.faqbox:hover{
+.faqbox:hover {
     background-color: #414141;
 }
 
+footer {
+    color: white;
+    max-width: 60vw;
+    margin: auto;
+}
+
+.footer a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    color: white;
+}
+
+footer .questions {
+    padding: 34px 0px;
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+
+@media screen and (max-width: 1300px) {
+
+    nav{
+        max-width: 90vw;
+        gap: 50px;
+    }
+
+    .first {
+        flex-wrap: wrap;
+    }
+
+    .secImg img {
+        width: 305px;
+    }
+
+    .secImg video {
+        width: 305px;
+    }
+
+    .hero> :nth-child(1) {
+        font-size: 32px;
+    }
+
+    .hero> :nth-child(2) {
+        font-size: 18px;
+    }
+
+    .hero> :nth-child(3) {
+        font-size: 18px;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .hero-buttons input{
+        margin-bottom: 17px;
+    }
+
+    .faq h2 {
+        text-align: center;
+        font-size: 32px;
+    }
+
+    footer {
+        max-width: 90vw;
+        padding: 75px 0;
+    }
+
+    .footer-item{
+        align-items: center;
+    }
+ 
+
+}
+
+
+
+@media screen and (max-width: 1300px) {
+
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+}
+
+
+.footer a {
+    font-size: 14px;
+    color: white;
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
