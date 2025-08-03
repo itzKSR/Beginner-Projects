@@ -8,7 +8,7 @@
     font-style: normal;
 }
 
-body{
+body {
     background-color: black;
 }
 
@@ -64,37 +64,41 @@ nav button {
     padding: 0, 30px;
 }
 
-.hero> :first-child{
+.hero> :first-child {
     font-weight: 900;
     font-size: 48px;
     text-align: center;
 }
 
-.hero> :nth-child(2){
+.hero> :nth-child(2) {
     font-weight: 400;
     font-size: 28px;
     text-align: center;
 }
 
-.hero> :nth-child(3){
+.hero> :nth-child(3) {
     font-weight: 400;
     font-size: 24px;
     text-align: center;
 }
 
-.separation{
+.separation {
     height: 11px;
     background-color: rgba(24, 24, 24, 1);
 }
 
-.btn{
-    padding: 3px 8px;
-    font-weight: bold;
-    background-color: white;
+.btn {
+    padding: 8px 20px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.674);
     font-size: 15px;
+    background-color: rgba(248, 243, 243, 0.021);
+    border-radius: 4px;
+    border: 1px solid white;
+    cursor: pointer;
 }
 
-.btn-red{
+.btn-red {
     background-color: red;
     color: white;
     font-weight: 300;
@@ -103,17 +107,25 @@ nav button {
     padding: 8px 24px;
 }
 
-.main input{
+.main input {
     font-size: 24px;
     border-radius: 4px;
     padding: 8px 15px 8px 14px;
-    font-weight: 600;
+    font-weight: 500;
     color: white;
     background-color: rgba(23, 23, 23, 0.7);
     border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-.btn-red-sm{
+.btn-red-sm {
     background-color: red;
     color: white;
+    padding: 8px 20px;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
 }
