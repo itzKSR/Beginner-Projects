@@ -1,6 +1,7 @@
 import speech_recognition as sr
 import webbrowser
 import pyttsx3
+import music_llibrary
 
 recognizer = sr.Recognizer()
 
@@ -14,21 +15,26 @@ def process_command(command):
     print(command)
     if "gpt" in command.lower():
         webbrowser.open("https://chatgpt.com")
-    if "google" in command.lower():
+    elif "google" in command.lower():
         webbrowser.open("https://google.com")
-    if 'youtube' in command.lower():
+    elif 'youtube' in command.lower():
         webbrowser.open('https://youtube.com')
-    if "quora" in command.lower():
+    elif "quora" in command.lower():
         webbrowser.open("https://quora.com")
-    if "leetcode" in command.lower() or "dsa" in command.lower():
+    elif "leetcode" in command.lower() or "dsa" in command.lower():
         webbrowser.open("https://leetcode.com")
-    if "portfolio" in command.lower() or "codolio" in command.lower():
+    elif "portfolio" in command.lower() or "codolio" in command.lower():
         webbrowser.open("https://codolio.com/profile/iamKSR")
-    if "github" in command.lower():
+    elif "github" in command.lower():
         webbrowser.open("https://github.com")
-    
-    if "anime" in command.lower():
+    elif "anime" in command.lower():
         webbrowser.open("https://anikai.to/")
+    elif command.lower().startswith('play'):
+        song = command.lower().split(" ")[1]
+        link = music_llibrary.music[song]
+        webbrowser.open(link)
+    
+
 
 if __name__ == "__main__":
     speak("initialising jarvis..")
