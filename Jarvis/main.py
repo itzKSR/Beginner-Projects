@@ -33,7 +33,7 @@ def process_command(command):
         song = command.lower().split(" ")[1]
         link = music_llibrary.music[song]
         webbrowser.open(link)
-    
+    elif "news" in command.lower:
 
 
 if __name__ == "__main__":
