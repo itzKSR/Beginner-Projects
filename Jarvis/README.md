@@ -23,4 +23,4 @@ This is an experimental Python voice assistant created purely for **learning pur
 2. **Clone the repository:**
 ```bash
 git clone https://github.com/itzKSR/Beginner-Projects.git
-cd Beginner-Projects/Jarvis
+cd Learner-Projects/Jarvis
