@@ -1,4 +1,4 @@
-# Some Basic Initial Projects
+# Some Basic Projects For Learning Myself
 
 Contents (will be updated everytime something new comes):
 
