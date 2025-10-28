@@ -7,8 +7,12 @@ import requests
 from client import chat_with_gpt
 import time
 from dotenv import load_dotenv
+import pywhatkit
+
 
 load_dotenv()
+
+
 API_KEY = os.getenv("NEWS_API_KEY")
 NEWS_URL = f"https://newsapi.org/v2/top-headlines?country=in&category=general&apiKey={API_KEY}"
 
@@ -28,6 +32,13 @@ def get_news():
         return "Here are the top headlines: " + ". ".join(top_headlines)
     except Exception as e:
         return f"Error fetching news: {e}"
+    
+def play_song(song_name):
+    try:
+        speak(f"Playing {song_name} on YouTube.")
+        pywhatkit.playonyt(song_name)  # auto-plays top YouTube result
+    except Exception as e:
+        speak(f"Sorry, I couldn’t play {song_name}. Error: {e}")
 
 def speak(text):
     engine = pyttsx3.init()
@@ -56,13 +67,14 @@ def process_command(command, last_news_time, news_cache):
         webbrowser.open("https://github.com")
     elif "anime" in command_lower:
         webbrowser.open("https://anikai.to/")
+    
     elif command_lower.startswith('play'):
-        song = command_lower.split(" ")[1]
-        link = music_llibrary.music.get(song, None)
-        if link:
-            webbrowser.open(link)
+        song_name = command_lower.replace("play", "").strip()
+        if song_name:
+            play_song(song_name)
         else:
-            speak(f"Sorry, I don't have {song} in my library.")
+            speak("Please tell me which song you want to play.")
+
     elif "news" in command_lower:
         current_time = time.time()
         if current_time - last_news_time > 1800:
